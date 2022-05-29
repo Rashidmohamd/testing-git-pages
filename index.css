@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     overflow:hidden;
     background:lightgreen;
@@ -53,7 +54,7 @@ nav ul{
 
 nav ul a{
     text-decoration:none;
-    font-size:30px;
+    font-size:2rem;
     font-weight:300;
     margin:30px;
     color:gray;
@@ -61,7 +62,7 @@ nav ul a{
 }
 
 .close{
-    visibility: hidden;
+ display:none;
 }
 
 
@@ -76,7 +77,21 @@ nav ul a{
    transition: all .5s linear;
 }
 
+@media screen and (max-width:1300px){
+   html{
+       font-size: 13px;
+   }
+
+   nav ul a{
+       font-size: 1.5rem;
+   }
+}
+
 @media screen and (max-width:720px) {
+
+    html{
+        font-size:10px;
+    }
     header nav{
        position: fixed;
        width:50%;
@@ -88,7 +103,8 @@ nav ul a{
     
     }
     .close{
-        visibility: visible;
+        display:inline;
+        
         cursor:pointer;
         color:white;
         transition: all .5s linear;
